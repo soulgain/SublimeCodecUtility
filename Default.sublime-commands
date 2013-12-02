@@ -1,0 +1,10 @@
+[
+    {
+        "caption": "Base64 Encode",
+        "command": "base64encode"
+    },
+   	{
+        "caption": "Base64 Decode",
+        "command": "base64decode"
+    }
+]

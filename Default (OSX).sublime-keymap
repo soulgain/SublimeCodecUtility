@@ -1,0 +1,4 @@
+[
+	{ "keys": ["super+u", "super+e"], "command": "base64encode" },
+	{ "keys": ["super+u", "super+d"], "command": "base64decode" }	
+]
