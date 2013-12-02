@@ -5,8 +5,8 @@
         "children":
         [
             {
-                "id": "format",
-                "caption": "Format",
+                "id": "codec",
+                "caption": "Codec",
                 "children":
                 [
                     {
