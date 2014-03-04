@@ -1,7 +1,7 @@
 #coding=utf-8
 
 import base64
-from baseCodec import CodecUtility
+from .baseCodec import CodecUtility
 
 
 class Base64Codec(CodecUtility):
@@ -38,5 +38,5 @@ if __name__ == '__main__':
 	codec = Base16Codec
 	s = 'foo'
 	ret = codec.encode(s)
-	print ret
-	print codec.decode(ret)
+	print(ret)
+	print(codec.decode(ret))

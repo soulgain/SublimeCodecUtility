@@ -1,5 +1,5 @@
 import sublime, sublime_plugin
-from base64Codec import Base64Codec
+from .base64Codec import Base64Codec
 
 
 def handleAllSelection(view, edit, regions, handler):	
