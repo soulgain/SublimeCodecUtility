@@ -4,7 +4,9 @@ from .base64Codec import Base64Codec
 
 def handleAllSelection(view, edit, regions, handler):	
 	for sel in regions:
-		s = handler(view.substr(sel))
+		# for python3 b"string"
+		# or encode with acsii
+		s = handler(view.substr(sel).encode("ascii")).decode("ascii")
 		view.replace(edit, sel, s)
 
 
