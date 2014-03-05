@@ -1,12 +1,20 @@
+import sys
+if sys.version > '3':
+	from .base64Codec import Base64Codec
+else:
+	from base64Codec import Base64Codec
+
 import sublime, sublime_plugin
-from .base64Codec import Base64Codec
 
 
 def handleAllSelection(view, edit, regions, handler):	
 	for sel in regions:
 		# for python3 b"string"
 		# or encode with acsii
-		s = handler(view.substr(sel).encode("ascii")).decode("ascii")
+		if sys.version > '3':
+			s = handler(view.substr(sel).encode("ascii")).decode("ascii")
+		else:
+			s = handler(view.substr(sel))
 		view.replace(edit, sel, s)
 
 
