@@ -22,5 +22,13 @@
    	{
         "caption": "Base16 Decode",
         "command": "base16decode"
+    },
+    {
+        "caption": "URL Encode",
+        "command": "urlencode"
+    },
+    {
+        "caption": "URL Decode",
+        "command": "urldecode"
     }
 ]
