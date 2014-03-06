@@ -1,8 +1,8 @@
 import sys
 if sys.version > '3':
-	from .base64Codec import Base64Codec
+	from .base64Codec import *
 else:
-	from base64Codec import Base64Codec
+	from base64Codec import *
 
 import sublime, sublime_plugin
 
@@ -35,4 +35,24 @@ class Base64encodeCommand(sublime_plugin.TextCommand):
 class Base64decodeCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
 		handleAllSelection(self.view, edit, SelectionsNotEmpty(self.view), Base64Codec.decode)
+
+
+class Base32encodeCommand(sublime_plugin.TextCommand):
+	def run(self, edit):
+		handleAllSelection(self.view, edit, SelectionsNotEmpty(self.view), Base32Codec.encode)
+
+
+class Base32decodeCommand(sublime_plugin.TextCommand):
+	def run(self, edit):
+		handleAllSelection(self.view, edit, SelectionsNotEmpty(self.view), Base32Codec.decode)
+
+
+class Base16encodeCommand(sublime_plugin.TextCommand):
+	def run(self, edit):
+		handleAllSelection(self.view, edit, SelectionsNotEmpty(self.view), Base16Codec.encode)
+
+
+class Base16decodeCommand(sublime_plugin.TextCommand):
+	def run(self, edit):
+		handleAllSelection(self.view, edit, SelectionsNotEmpty(self.view), Base16Codec.decode)
 

@@ -6,5 +6,21 @@
    	{
         "caption": "Base64 Decode",
         "command": "base64decode"
+    },
+    {
+        "caption": "Base32 Encode",
+        "command": "base32encode"
+    },
+   	{
+        "caption": "Base32 Decode",
+        "command": "base32decode"
+    },
+    {
+        "caption": "Base16 Encode",
+        "command": "base16encode"
+    },
+   	{
+        "caption": "Base16 Decode",
+        "command": "base16decode"
     }
 ]
