@@ -9,8 +9,6 @@ import sublime, sublime_plugin
 
 def handleAllSelection(view, edit, regions, handler):	
 	for sel in regions:
-		# for python3 b"string"
-		# or encode with acsii
 		s = handler(view.substr(sel))
 		view.replace(edit, sel, s)
 
