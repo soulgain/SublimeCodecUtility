@@ -11,10 +11,7 @@ def handleAllSelection(view, edit, regions, handler):
 	for sel in regions:
 		# for python3 b"string"
 		# or encode with acsii
-		if sys.version > '3':
-			s = handler(view.substr(sel).encode("ascii")).decode("ascii")
-		else:
-			s = handler(view.substr(sel))
+		s = handler(view.substr(sel))
 		view.replace(edit, sel, s)
 
 
